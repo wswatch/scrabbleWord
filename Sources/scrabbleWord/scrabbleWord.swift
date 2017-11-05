@@ -85,7 +85,7 @@ public func readWords(path:String) throws -> [scrabbleWord] {
                     i = line.index(i, offsetBy: 1)
                 }
                 let def = String( line[ i ..< line.endIndex ] )
-                let word:scrabbleWord = try Word(word:letters, def:def)
+                let word:scrabbleWord = try scrabbleWord(word:letters, def:def)
                 wordList.append(word)
             }
         }
